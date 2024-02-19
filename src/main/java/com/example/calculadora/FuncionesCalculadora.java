@@ -3,6 +3,8 @@ package com.example.calculadora;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+//Los resultados se obtienen al crear el constructor, puedes mandar a llamarlo con los get
+
 public class FuncionesCalculadora {
     private final String expresionInfija;
     private final String expresionPosfija;
@@ -117,9 +119,4 @@ public class FuncionesCalculadora {
                 throw new IllegalArgumentException("Operador inválido: " + operador);
         }
     }
-    public static void main(String[] args) {
-        FuncionesCalculadora newCalcul = new FuncionesCalculadora("5 * 7 + 4 * 2");
-        System.out.println("El resultado de la expresión '" + newCalcul.getExpresionInfija() + "' es: " + newCalcul.getResult());
-    }
-
 }
